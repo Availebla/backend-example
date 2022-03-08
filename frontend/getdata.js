@@ -47,41 +47,46 @@ code += "</ul>";
 
 $(".mypanel").html(code);
 
-// normal functions
+// // 1.normal functions
 // function add(x, y) {
 //   return x + y;
 // }
+// console.log(add(2,3));
 
-// anonymous functions
+// // 2.anonymous functions
 // let add = function (x, y) {
 //   return x + y;
 // };
+// console.log(add(4,5));
 
-// arrow functions
-let add = (x, y) => {
-  return x + y;
-};
 function add_async(x, y, cb) {
   let sum = x + y;
   cb(sum);
 }
+// // 3.arrow functions
+let add = (x, y) => {
+  return x + y;
+};
 
-// let subtract = (x, y) => {
-//   return x - y;
-// };
+let subtract = (x, y) => {
+  return x - y;
+};
 
-// function perform_operation(x, y, operation) {
-//   return operation(x, y);
-// }
+// Callback Function using the above two arrow functions as inputs
+function perform_operation(x, y, operation) {
+  return operation(x, y);
+}
 
-// console.log(perform_operation(2, 3, add));
-// console.log(perform_operation(2, 3, subtract));
+console.log(perform_operation(2, 3, add));
+console.log(perform_operation(2, 3, subtract));
 
-console.log("Hello");
-let sum = add(2, 3);
-console.log("sum: " + sum);
+// //Synchronous Code execution example below
+// console.log("Hello");
+// let sum = add(2, 3);
+// console.log("sum: " + sum);
 
-console.log("Hello");
-add_async(2, 3, function (sum) {
-  console.log("Sum: " + sum);
-});
+// //Asynchronous Code execution using callback function
+// console.log("Hello");
+// add_async(2, 3, function (sum) {
+//   console.log("Sum: " + sum);
+// });
