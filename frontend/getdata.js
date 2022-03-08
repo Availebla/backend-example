@@ -80,13 +80,13 @@ function perform_operation(x, y, operation) {
 console.log(perform_operation(2, 3, add));
 console.log(perform_operation(2, 3, subtract));
 
-// //Synchronous Code execution example below
-// console.log("Hello");
-// let sum = add(2, 3);
-// console.log("sum: " + sum);
+//Synchronous Code execution example below
+console.log("Hello");
+let sum = add(2, 3);
+console.log("sum: " + sum);
 
-// //Asynchronous Code execution using callback function
-// console.log("Hello");
-// add_async(2, 3, function (sum) {
-//   console.log("Sum: " + sum);
-// });
+//Asynchronous Code execution using callback function
+console.log("Hello");
+add_async(2, 3, function (sum) {
+  console.log("Sum: " + sum);
+});
